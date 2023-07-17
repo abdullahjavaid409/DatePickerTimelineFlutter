@@ -33,6 +33,7 @@ class DateWidget extends StatelessWidget {
     return InkWell(
       child: Container(
         width: width,
+        alignment: Alignment.center,
         padding: EdgeInsets.all(8),
         margin: const EdgeInsets.all(3.0),
         decoration: BoxDecoration(

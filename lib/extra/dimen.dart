@@ -8,7 +8,7 @@
 class Dimen {
   Dimen._();
 
-  static const double dateTextSize = 12;
-  static const double dayTextSize = 11;
+  static const double dateTextSize = 8;
+  static const double dayTextSize = 12;
   static const double monthTextSize = 8;
 }
