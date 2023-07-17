@@ -62,7 +62,7 @@ class DatePicker extends StatefulWidget {
     this.startDate, {
     Key? key,
     this.width = 60,
-    this.height = 80,
+    this.height = 60,
     this.controller,
     this.monthTextStyle = defaultMonthTextStyle,
     this.dayTextStyle = defaultDayTextStyle,
@@ -126,11 +126,9 @@ class _DatePickerState extends State<DatePicker> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 40,
+    return Container(
+      height: widget.height,
       child: ListView.builder(
-        shrinkWrap: true,
-        primary: true,
         itemCount: widget.daysCount,
         scrollDirection: Axis.horizontal,
         controller: _controller,
