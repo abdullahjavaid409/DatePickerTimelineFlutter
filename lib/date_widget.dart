@@ -40,21 +40,18 @@ class DateWidget extends StatelessWidget {
           color: selectionColor,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            Text(
+                new DateFormat("E", locale)
+                    .format(date)
+                    .toUpperCase(), // WeekDay
+                style: dayTextStyle),
+            SizedBox(height: 5),
             Text(date.day.toString(), // Date
                 style: dateTextStyle),
-            Text(
-                new DateFormat("MMM", locale)
-                    .format(date)
-                    .toUpperCase(), // Month
-                style: monthTextStyle),
-            // Text(
-            //     new DateFormat("E", locale)
-            //         .format(date)
-            //         .toUpperCase(), // WeekDay
-            //     style: dayTextStyle)
+
+            //
           ],
         ),
       ),
