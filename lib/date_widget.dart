@@ -33,25 +33,29 @@ class DateWidget extends StatelessWidget {
     return InkWell(
       child: Container(
         width: width,
+        padding: EdgeInsets.all(8),
         margin: const EdgeInsets.all(3.0),
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(8.0)),
           color: selectionColor,
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(8),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text(new DateFormat("MMM", locale).format(date).toUpperCase(), // Month
-                  style: monthTextStyle),
-              Text(date.day.toString(), // Date
-                  style: dateTextStyle),
-              Text(new DateFormat("E", locale).format(date).toUpperCase(), // WeekDay
-                  style: dayTextStyle)
-            ],
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Text(date.day.toString(), // Date
+                style: dateTextStyle),
+            Text(
+                new DateFormat("MMM", locale)
+                    .format(date)
+                    .toUpperCase(), // Month
+                style: monthTextStyle),
+            // Text(
+            //     new DateFormat("E", locale)
+            //         .format(date)
+            //         .toUpperCase(), // WeekDay
+            //     style: dayTextStyle)
+          ],
         ),
       ),
       onTap: () {
